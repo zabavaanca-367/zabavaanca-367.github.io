@@ -14,7 +14,51 @@ body {
   background: #ffffff;
   color: #0f172a;
 }
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .meniu-navigatie {
+    position: absolute;
+    top: 70px; /* sub navbar */
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none; /* ascuns inițial */
+    border-left: 1px solid #e5e7eb;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+
+  .meniu-navigatie li {
+    margin-bottom: 16px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  .meniu-navigatie.active {
+    display: flex;
+  }
+}
 /*NAVBAR*/
 
 .header {
@@ -40,7 +84,6 @@ body {
   font-weight: 600;
   color: #0f172a;
 }
-
 .meniu-navigatie {
   list-style: none;
   display: flex;
@@ -506,43 +549,21 @@ body {
     flex-direction: column;
     gap: 12px;
   }
-
-  /* Hero Section */
+  .continut-hero {
+    padding: 20px 10px;
+  }
+  .nume { font-size: 2rem; }
+  .profesie { font-size: 1.2rem; }
+  .descriere { font-size: 0.9rem; }
+  .butoane-hero { flex-direction: column; gap: 12px; }
   .sectiune-hero {
     padding-top: 120px;
   }
 
-  .continut-hero {
-    padding: 20px 10px;
-  }
-
-  .nume {
-    font-size: 2rem;
-  }
-
-  .profesie {
-    font-size: 1.2rem;
-  }
-
-  .descriere {
-    font-size: 0.9rem;
-  }
-
-  .butoane-hero {
-    flex-direction: column;
-    gap: 12px;
-  }
-
   /* Skills Grid */
-  .lista-skilluri {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
+  .lista-skilluri { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grila-skilluri { grid-template-columns: 1fr; gap: 20px; }
 
-  .grila-skilluri {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
 
   /* Experience */
   .experienta-item {
@@ -551,22 +572,13 @@ body {
   }
 
   /* Projects */
-  .lista-proiecte {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
+  .lista-proiecte { grid-template-columns: 1fr; gap: 20px; }
+  
   /* Footer */
-  .date-contact {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .social-icons {
-    justify-content: center;
-    margin-top: 20px;
-  }
+  .date-contact { grid-template-columns: 1fr; gap: 20px; }
+  .social-icons { justify-content: center; margin-top: 20px; }
 }
+
 
 /* TABLET (max-width: 1024px) */
 @media (max-width: 1024px) {
