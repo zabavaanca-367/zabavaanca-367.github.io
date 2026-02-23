@@ -493,3 +493,96 @@ body {
   height: 30px;
   filter: grayscale(100%);
 }
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .meniu-navigatie {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Hero Section */
+  .sectiune-hero {
+    padding-top: 120px;
+  }
+
+  .continut-hero {
+    padding: 20px 10px;
+  }
+
+  .nume {
+    font-size: 2rem;
+  }
+
+  .profesie {
+    font-size: 1.2rem;
+  }
+
+  .descriere {
+    font-size: 0.9rem;
+  }
+
+  .butoane-hero {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Skills Grid */
+  .lista-skilluri {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .grila-skilluri {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Experience */
+  .experienta-item {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  /* Projects */
+  .lista-proiecte {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Footer */
+  .date-contact {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* TABLET (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .lista-skilluri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grila-skilluri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lista-proiecte {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experienta-item {
+    margin-left: 40px;
+  }
+}
