@@ -16,7 +16,11 @@
       <div class="logo">
         Zăbavă Ioana Anca
       </div>
-
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
       <ul class="meniu-navigatie">
         <li><a href="#hero" class="link-activ">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -241,6 +245,13 @@
     </div>
 
 </footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.meniu-navigatie');
 
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
 </body>
 </html>
