@@ -549,7 +549,7 @@ body {
   .meniu-navigatie {
     display: none;
     position: absolute;
-    top: 55px;
+    margin-top: 55px;
     right: 0;
     width: 100%;
     background: #ffffff;
@@ -559,8 +559,6 @@ body {
     gap: 20px;
     border-top: 1px solid #e5e7eb;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    z-index: -1;
-    
   }
 
   /* Arată hamburger */
