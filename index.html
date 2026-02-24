@@ -16,7 +16,7 @@
       <div class="logo">
         Zăbavă Ioana-Anca
       </div>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
@@ -245,12 +245,9 @@
 
 </footer>
 <script>
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('.meniu-navigatie');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+function toggleMenu() {
+  document.querySelector(".meniu-navigatie").classList.toggle("active");
+}
 </script>
 </body>
 </html>
