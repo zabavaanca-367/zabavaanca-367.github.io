@@ -550,7 +550,7 @@ body {
   .meniu-navigatie {
     display: none;
     position: absolute;
-    top: 30px;
+    top: 0;
     right: 0;
     width: 100%;
     background: #ffffff;
