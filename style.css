@@ -59,6 +59,7 @@ body {
   color: #0f172a;
   font-weight: 500;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -71,7 +72,6 @@ body {
   height: 2px;
   background: #0f172a;
   border-radius: 2px;
-  transition: 0.3s ease;
 }
 /*HERO*/
 .sectiune-hero {
@@ -539,75 +539,45 @@ body {
 
 
 /* MOBILE (≤768px) */
-
 @media (max-width: 768px) {
 
   html {
     font-size: 14px;
   }
 
-  /* NAVBAR FIX */
-  .navbar-container {
-    flex-direction: row;
-  }
-  
-.hamburger {
-  display: flex;
-}
-
-.meniu-navigatie {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  width: 100%;
-  background: #ffffff;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-  display: none;
-  gap: 20px;
-  border-top: 1px solid #e5e7eb;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.meniu-navigatie.active {
-  display: flex;
-}
-
-  /* HERO FIX */
-  .sectiune-hero {
-    padding-top: 140px;
-    min-height: auto;
-  }
-
-  .nume {
-    font-size: 1.8rem;
-  }
-
-  .profesie {
-    font-size: 1.1rem;
-  }
-
-  .butoane-hero {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .butoane-hero a {
+  /* Ascunde meniul normal */
+  .meniu-navigatie {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
     width: 100%;
-    text-align: center;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   }
 
-  /* SKILLS FIX */
-  .lista-skilluri {
+  /* Arată hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Când este activ */
+  .meniu-navigatie.active {
+    display: flex;
+  }
+
+  /* Restul fixurilor tale */
+  .lista-skilluri,
+  .grila-skilluri,
+  .lista-proiecte {
     grid-template-columns: 1fr;
   }
 
-  .grila-skilluri {
-    grid-template-columns: 1fr;
-  }
-
-  /* EXPERIENCE FIX */
   .experienta-item {
     margin-left: 0;
     padding: 24px;
@@ -619,12 +589,6 @@ body {
     margin-top: 8px;
   }
 
-  /* PROJECTS FIX */
-  .lista-proiecte {
-    grid-template-columns: 1fr;
-  }
-
-  /* FOOTER FIX */
   .date-contact {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -634,14 +598,8 @@ body {
     justify-content: center;
     margin-top: 20px;
   }
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: grayscale(100%);
-}
+
   .copyright {
     text-align: center;
   }
 }
-
-
