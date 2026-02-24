@@ -494,18 +494,17 @@ body {
   filter: grayscale(100%);
 }
 
-/* ================================= */
-/*        RESPONSIVE FIX ONLY        */
-/* ================================= */
 
-/* Prevent horizontal scroll */
+/*        RESPONSIVE FIX ONLY        */
+
+
 body {
   overflow-x: hidden;
 }
 
-/* ================================= */
+
 /* TABLET (≤1024px) */
-/* ================================= */
+
 @media (max-width: 1024px) {
 
   .lista-skilluri {
@@ -525,9 +524,9 @@ body {
   }
 }
 
-/* ================================= */
+
 /* MOBILE (≤768px) */
-/* ================================= */
+
 @media (max-width: 768px) {
 
   html {
@@ -545,7 +544,7 @@ body {
 
   .meniu-navigatie {
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: 0;
     width: 100%;
     background: #ffffff;
@@ -622,7 +621,11 @@ body {
     justify-content: center;
     margin-top: 20px;
   }
-
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+}
   .copyright {
     text-align: center;
   }
