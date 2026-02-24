@@ -551,17 +551,17 @@ body {
 .meniu-navigatie {
   display: none;
   position: absolute;
-  top: 100%; 
+  top: 100%; /* fix sub header */
   right: 0;
   width: 100%;
   background: #ffffff;
   flex-direction: column;
   align-items: center;
-  padding: 0; 
-  gap: 12px; /
-  border-top: none; 
+  padding: 12px 0; /* distanță internă sus-jos */
+  gap: 12px;
+  border-top: 1px solid #e5e7eb;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  z-index:1000;
+  z-index: 1000; 
 }
 
 .meniu-navigatie.active {
