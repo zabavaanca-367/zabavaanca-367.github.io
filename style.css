@@ -1,65 +1,33 @@
 
+/* RESET + GLOBAL */
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 html {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   background: #ffffff;
   color: #0f172a;
-}
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+  overflow-x: hidden;
 }
 
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 25px;
-  background: #0f172a;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+section {
+  width: 100%;
 }
 
-/* MOBILE NAV */
-@media (max-width: 768px) {
-  .meniu-navigatie {
-    position: absolute;
-    top: 70px; /* sub navbar */
-    right: 0;
-    background: #ffffff;
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    display: none; /* ascuns inițial */
-    border-left: 1px solid #e5e7eb;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    z-index: 99;
-  }
 
-  .meniu-navigatie li {
-    margin-bottom: 16px;
-  }
+/* NAVBAR */
 
-  .hamburger {
-    display: flex;
-  }
-  
-  .meniu-navigatie.active {
-    display: flex;
-  }
-}
-/*NAVBAR*/
 
 .header {
   position: fixed;
@@ -84,6 +52,7 @@ body {
   font-weight: 600;
   color: #0f172a;
 }
+
 .meniu-navigatie {
   list-style: none;
   display: flex;
@@ -94,7 +63,7 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
   color: #475569;
-  transition: color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .meniu-navigatie a:hover,
@@ -103,14 +72,31 @@ body {
   font-weight: 500;
 }
 
-/*HERO*/
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+
+/* HERO */
+
+
 .sectiune-hero {
   min-height: 100vh;
-  padding-top: 100px;
-  background: radial-gradient(
-    circle at top,
-    #1e293b 0%,
-    #020617 70%);
+  padding-top: 120px;
+  background: radial-gradient(circle at top, #1e293b 0%, #020617 70%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +150,6 @@ body {
   color: #020617;
   padding: 12px 26px;
   border-radius: 10px;
-  font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -174,12 +159,7 @@ body {
   color: #ffffff;
   padding: 12px 26px;
   border-radius: 10px;
-  font-size: 0.95rem;
   text-decoration: none;
-}
-
-.buton-secundar:hover {
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .social-media {
@@ -190,7 +170,6 @@ body {
 
 .social-media a {
   color: #94a3b8;
-  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -198,7 +177,10 @@ body {
   color: #ffffff;
 }
 
-/*ABOUT*/
+
+/* ABOUT */
+
+
 .sectiune-despre {
   padding: 120px 20px 80px;
 }
@@ -212,16 +194,26 @@ body {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .text-descriere {
   text-align: center;
   max-width: 700px;
   margin: auto;
-  font-size: 1rem;
   color: #475569;
   line-height: 1.7;
+}
+
+.lista-skilluri {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card-skill {
+  text-align: center;
 }
 
 .icon-skill {
@@ -233,33 +225,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
   margin: 0 auto 16px;
 }
 
-.lista-skilluri {
-  display: grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap: 40px;
-  margin-top: 60px;
-}
 
-.card-skill {
-  text-align: center;
-}
+/* TECH SKILLS */
 
-.card-skill h3 {
-  margin-top: 16px;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-}
 
-.card-skill p {
-  color: #475569;
-  font-size: 0.95rem;
-}
-
-.sectiune-skilluri{
+.sectiune-skilluri {
   padding: 80px 20px;
 }
 
@@ -271,30 +244,10 @@ body {
   padding: 40px 48px;
 }
 
-.titlu-skilluri {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 32px;
-  color: #020617;
-}
-
 .grila-skilluri {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-}
-
-.categorie-skill h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: #020617;
-}
-
-.lista-taguri {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .tag-skill {
@@ -303,53 +256,30 @@ body {
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 0.85rem;
-  color: #0f172a;
-  font-weight: 500;
 }
 
-/*EXPERIENRA*/
+
+/* EXPERIENCE */
+
+
 .sectiune-experienta {
   background: #f8fafc;
   padding: 100px 20px;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .container-experienta {
   max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.titlu-sectiune {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 12px;
-}
-
-.subtitlu-experienta {
-  text-align: center;
-  font-size: 15px;
-  color: #64748b;
-  margin-bottom: 70px;
+  margin: auto;
 }
 
 .experienta-item {
-  position: relative;
   background: #ffffff;
   border-radius: 16px;
   padding: 32px;
-  margin-left: 80px;
   margin-bottom: 40px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-}
-
-.institutie {
-  font-size: 15px;
-  color: #475569;
-  display: block;
+  position: relative;
 }
 
 .perioada {
@@ -360,32 +290,18 @@ body {
   color: #64748b;
 }
 
-.experienta-item p {
-  margin-top: 18px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #475569;
-  max-width: 92%;
-}
 
-/*PROJECTS*/
+/* PROJECTS */
+
+
 .sectiune-proiecte {
   background: #f8fafc;
   padding: 80px 20px;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .container-proiecte {
   max-width: 1100px;
-  margin: 0 auto;
-}
-
-.titlu-sectiune {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 64px;
+  margin: auto;
 }
 
 .lista-proiecte {
@@ -399,8 +315,7 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .card-proiect:hover {
@@ -413,50 +328,23 @@ body {
   height: 170px;
   object-fit: cover;
   border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #e5e7eb;
   margin-bottom: 16px;
 }
 
-.card-proiect h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 6px;
-}
 
-.card-proiect p {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #475569;
-  margin-bottom: 16px;
-}
+/* FOOTER */
 
-/*FOOTER*/
+
 .footer-contact {
-  background: radial-gradient(
-    #1e293b 10%,
-    #020617 90%);
+  background: radial-gradient(#1e293b 10%, #020617 90%);
   color: #e5e7eb;
   padding: 90px 20px 40px;
-  font-family: "Inter", sans-serif;
 }
 
 .container-footer {
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
   text-align: center;
-}
-
-.footer-contact .titlu-sectiune {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #ffffff;
-}
-
-.footer-contact p {
-  color: #94a3b8;
 }
 
 .date-contact {
@@ -466,124 +354,29 @@ body {
   gap: 60px;
 }
 
-.date-contact p {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-size: 15px;
-  color: #94a3b8;
-}
-
-.date-contact p::before {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.date-contact p:nth-child(1)::before {
-  content: "✉";
-  font-size: 22px;
-}
-
-.date-contact p:nth-child(2)::before {
-  content: "✆";
-  font-size: 22px;
-}
-
-.date-contact p:nth-child(3)::before {
-  content: "⚲";
-  font-size: 22px;
-}
-
 .copyright {
   margin-top: 70px;
   padding-top: 24px;
   border-top: 1px solid rgba(148, 163, 184, 0.2);
   font-size: 14px;
-  color: #94a3b8;
-  text-align: left;
+  text-align: center;
 }
 
 .social-icons {
   max-width: 1100px;
-  margin: -40px auto 0;
+  margin: 20px auto 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 18px;
 }
 
-.social-icons a {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.social-icons a:hover {
-  background: rgba(255, 255, 255, 0.16);
-}
+/* RESPONSIVE */
 
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: grayscale(100%);
-}
-
-/* MOBILE (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar-container {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .meniu-navigatie {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .continut-hero {
-    padding: 20px 10px;
-  }
-  .nume { font-size: 2rem; }
-  .profesie { font-size: 1.2rem; }
-  .descriere { font-size: 0.9rem; }
-  .butoane-hero { flex-direction: column; gap: 12px; }
-  .sectiune-hero {
-    padding-top: 120px;
-  }
-
-  /* Skills Grid */
-  .lista-skilluri { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .grila-skilluri { grid-template-columns: 1fr; gap: 20px; }
-
-
-  /* Experience */
-  .experienta-item {
-    margin-left: 0;
-    padding: 20px;
-  }
-
-  /* Projects */
-  .lista-proiecte { grid-template-columns: 1fr; gap: 20px; }
-  
-  /* Footer */
-  .date-contact { grid-template-columns: 1fr; gap: 20px; }
-  .social-icons { justify-content: center; margin-top: 20px; }
-}
-
-
-/* TABLET (max-width: 1024px) */
 @media (max-width: 1024px) {
+
   .lista-skilluri {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grila-skilluri {
@@ -593,8 +386,54 @@ body {
   .lista-proiecte {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .experienta-item {
-    margin-left: 40px;
+@media (max-width: 768px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .meniu-navigatie {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  .meniu-navigatie.active {
+    display: flex;
+  }
+
+  .butoane-hero {
+    flex-direction: column;
+  }
+
+  .butoane-hero a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lista-skilluri,
+  .grila-skilluri,
+  .lista-proiecte,
+  .date-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .perioada {
+    position: static;
+    margin-top: 8px;
   }
 }
