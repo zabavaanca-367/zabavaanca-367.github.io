@@ -546,28 +546,28 @@ body {
   }
 
   /* Ascunde meniul normal */
-  .meniu-navigatie {
-    display: none;
-    position: absolute;
-    margin-top: 55px;
-    right: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-    border-top: 1px solid #e5e7eb;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
+.meniu-navigatie {
+  display: none;
+  position: absolute;
+  top: 0; 
+  right: 0;
+  width: 100%;
+  background: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; 
+  gap: 12px; /
+  border-top: none; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  z-index: 999;
+}
+
+.meniu-navigatie.active {
+  display: flex;
+}
 
   /* Arată hamburger */
   .hamburger {
-    display: flex;
-  }
-
-  /* Când este activ */
-  .meniu-navigatie.active {
     display: flex;
   }
 
