@@ -329,12 +329,19 @@ img {
   margin-top: 50px;
 }
 
-/* ================================================= */
-/*                 RESPONSIVE                        */
-/* ================================================= */
+/* ================================= */
+/*        RESPONSIVE FIX ONLY        */
+/* ================================= */
 
-/* Tablet */
-@media (min-width: 768px) {
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* ================================= */
+/* TABLET (≤1024px) */
+/* ================================= */
+@media (max-width: 1024px) {
 
   .lista-skilluri {
     grid-template-columns: repeat(2, 1fr);
@@ -347,30 +354,25 @@ img {
   .lista-proiecte {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* Desktop */
-@media (min-width: 1024px) {
-
-  .lista-skilluri {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .grila-skilluri {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .lista-proiecte {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hamburger {
-    display: none;
+  .experienta-item {
+    margin-left: 40px;
   }
 }
 
-/* Mobile Nav */
-@media (max-width: 767px) {
+/* ================================= */
+/* MOBILE (≤768px) */
+/* ================================= */
+@media (max-width: 768px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  /* NAVBAR FIX */
+  .navbar-container {
+    flex-direction: row;
+  }
 
   .hamburger {
     display: flex;
@@ -387,10 +389,78 @@ img {
     padding: 20px 0;
     display: none;
     gap: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   }
 
   .meniu-navigatie.active {
     display: flex;
   }
+
+  /* HERO FIX */
+  .sectiune-hero {
+    padding-top: 140px;
+    min-height: auto;
+  }
+
+  .nume {
+    font-size: 1.8rem;
+  }
+
+  .profesie {
+    font-size: 1.1rem;
+  }
+
+  .butoane-hero {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .butoane-hero a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SKILLS FIX */
+  .lista-skilluri {
+    grid-template-columns: 1fr;
+  }
+
+  .grila-skilluri {
+    grid-template-columns: 1fr;
+  }
+
+  /* EXPERIENCE FIX */
+  .experienta-item {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .perioada {
+    position: static;
+    display: block;
+    margin-top: 8px;
+  }
+
+  /* PROJECTS FIX */
+  .lista-proiecte {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER FIX */
+  .date-contact {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 }
+
+
