@@ -44,6 +44,7 @@ body {
   list-style: none;
   display: flex;
   gap: 32px;
+  z-index: 1000;
 }
 
 .meniu-navigatie a {
@@ -559,7 +560,7 @@ body {
   gap: 12px; /
   border-top: none; 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  z-index: 999;
+  z-index:1000;
 }
 
 .meniu-navigatie.active {
